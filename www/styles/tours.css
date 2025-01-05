@@ -1,0 +1,132 @@
+main{
+    max-width: 1200px;
+    margin: auto;
+    display: contents;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px 0;
+    color: var(--c-text);
+}
+
+#grid-container{
+    max-width: 1200px;
+    overflow-x: auto; 
+    margin: auto;
+    background-color: var(--c-3background);
+    padding: 20px;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#tours-grid {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+#tours-grid th, #tours-grid td {
+    padding: 4px;
+    border: 1px solid var(--c-darkgreen);
+    color: var(--c-text);
+}
+
+#tours-grid button{
+    font-size: 1rem;
+    margin: 4px;
+    font-family: Arial, sans-serif;
+    border: none;
+    border-radius: 2px;
+    background-color: var(--c-darkgreen);
+    color: var(--c-text);
+}
+
+#tours-grid th {
+    background-color: var(--c-lowBackground);
+    font-weight: bold;
+    color: var(--c-text);
+}
+
+#pagination {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#pagination button {
+    background-color: var(--c-green);
+    color: var(--c-text);
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#pagination button:hover {
+    background-color: var(--c-darkgreen);
+}
+
+#pagination button:disabled {
+    background-color: var(--c-2darkgreen);
+    cursor: not-allowed;
+    color: var(--c-lowText);
+}
+
+#add-button {
+    padding: 10px;
+    font-size: 1.3rem;
+    margin: 15px auto;
+    font-family: Arial, sans-serif;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--c-green);
+    color: var(--c-text);
+}
+
+@media print {
+    
+    #grid-container{
+        max-width: 100%;
+        overflow-x: visible;
+    } 
+
+    #grid-container{
+        background-color: none;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    #tours-grid{
+        display: table !important;
+        color: black;
+        min-width: 0;
+    }
+    #tours-grid th, #tours-grid td{
+        color: black;
+    }
+
+    #tours-grid button{
+        display: none;
+    } 
+
+    .top_menu{
+        display: none !important;
+    }
+    .top_img{
+        display: none !important;
+    }
+
+    #pagination{
+        display: none !important;
+    }
+
+    #add-button{
+        display: none !important;
+    }
+
+    *{
+        color: black;
+    }
+}

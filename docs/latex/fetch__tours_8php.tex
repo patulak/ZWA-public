@@ -1,0 +1,151 @@
+\doxysection{pages/fetch\+\_\+tours.php File Reference}
+\hypertarget{fetch__tours_8php}{}\label{fetch__tours_8php}\index{pages/fetch\_tours.php@{pages/fetch\_tours.php}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{fetch__tours_8php_a38addc8a958af4b42bda4fca677b4208}{\$required}} = "{}moderator"{}
+\item 
+\mbox{\hyperlink{fetch__tours_8php_a0a44e6760141442bb439b1ab1395d8ff}{\$page}} = isset(\$\+\_\+\+GET\mbox{[}\textquotesingle{}page\textquotesingle{}\mbox{]}) ? intval(\$\+\_\+\+GET\mbox{[}\textquotesingle{}page\textquotesingle{}\mbox{]}) \+: 1
+\item 
+\mbox{\hyperlink{fetch__tours_8php_a12a028ce00879e8088b03511538cb399}{\$items\+Per\+Page}} = 8
+\item 
+\mbox{\hyperlink{fetch__tours_8php_aec4de82415d7f05cb9748d12d3a95a87}{\$offset}} = (\$page -\/ 1) \texorpdfstring{$\ast$}{*} \$items\+Per\+Page
+\item 
+\mbox{\hyperlink{fetch__tours_8php_a047170d6020a882807665812a27e2525}{\$sql}}
+\item 
+\mbox{\hyperlink{fetch__tours_8php_af27a9140d5f2658693e7fd107f716449}{\$stmt}} = \$conn-\/$>$prepare(\$sql)
+\item 
+\mbox{\hyperlink{fetch__tours_8php_a112ef069ddc0454086e3d1e6d8d55d07}{\$result}} = \$stmt-\/$>$get\+\_\+result()
+\item 
+\mbox{\hyperlink{fetch__tours_8php_a6efc15b5a2314dd4b5aaa556a375c6d6}{\$data}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{fetch__tours_8php_a947bcb33f04bf0b4f40cd8f28d0c8cc3}{\$total\+Count\+Query}} = "{}SELECT COUNT(\texorpdfstring{$\ast$}{*}) as total FROM tours WHERE tour\+\_\+datetime $>$= CURDATE();"{}
+\item 
+\mbox{\hyperlink{fetch__tours_8php_ab130519e25d6d218ae7f4902e7a519e2}{\$total\+Count\+Result}} = \$conn-\/$>$query(\$total\+Count\+Query)
+\item 
+\mbox{\hyperlink{fetch__tours_8php_addef53a44ff4184702b26db53334d56c}{\$total\+Count\+Row}} = \$total\+Count\+Result-\/$>$fetch\+\_\+assoc()
+\item 
+\mbox{\hyperlink{fetch__tours_8php_af9edf373290aa054a1f352baa29e75aa}{\$total\+Count}} = \$total\+Count\+Row\mbox{[}\textquotesingle{}total\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{fetch__tours_8php_af4b6fb1bbc77ccc05f10da3b16935b99}{\$response}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{fetch__tours_8php_a6efc15b5a2314dd4b5aaa556a375c6d6}\index{fetch\_tours.php@{fetch\_tours.php}!\$data@{\$data}}
+\index{\$data@{\$data}!fetch\_tours.php@{fetch\_tours.php}}
+\doxysubsubsection{\texorpdfstring{\$data}{\$data}}
+{\footnotesize\ttfamily \label{fetch__tours_8php_a6efc15b5a2314dd4b5aaa556a375c6d6} 
+\$data = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{fetch__tours_8php_a12a028ce00879e8088b03511538cb399}\index{fetch\_tours.php@{fetch\_tours.php}!\$itemsPerPage@{\$itemsPerPage}}
+\index{\$itemsPerPage@{\$itemsPerPage}!fetch\_tours.php@{fetch\_tours.php}}
+\doxysubsubsection{\texorpdfstring{\$itemsPerPage}{\$itemsPerPage}}
+{\footnotesize\ttfamily \label{fetch__tours_8php_a12a028ce00879e8088b03511538cb399} 
+\$items\+Per\+Page = 8}
+
+\Hypertarget{fetch__tours_8php_aec4de82415d7f05cb9748d12d3a95a87}\index{fetch\_tours.php@{fetch\_tours.php}!\$offset@{\$offset}}
+\index{\$offset@{\$offset}!fetch\_tours.php@{fetch\_tours.php}}
+\doxysubsubsection{\texorpdfstring{\$offset}{\$offset}}
+{\footnotesize\ttfamily \label{fetch__tours_8php_aec4de82415d7f05cb9748d12d3a95a87} 
+\$offset = (\$page -\/ 1) \texorpdfstring{$\ast$}{*} \$items\+Per\+Page}
+
+\Hypertarget{fetch__tours_8php_a0a44e6760141442bb439b1ab1395d8ff}\index{fetch\_tours.php@{fetch\_tours.php}!\$page@{\$page}}
+\index{\$page@{\$page}!fetch\_tours.php@{fetch\_tours.php}}
+\doxysubsubsection{\texorpdfstring{\$page}{\$page}}
+{\footnotesize\ttfamily \label{fetch__tours_8php_a0a44e6760141442bb439b1ab1395d8ff} 
+\$page = isset(\$\+\_\+\+GET\mbox{[}\textquotesingle{}page\textquotesingle{}\mbox{]}) ? intval(\$\+\_\+\+GET\mbox{[}\textquotesingle{}page\textquotesingle{}\mbox{]}) \+: 1}
+
+\Hypertarget{fetch__tours_8php_a38addc8a958af4b42bda4fca677b4208}\index{fetch\_tours.php@{fetch\_tours.php}!\$required@{\$required}}
+\index{\$required@{\$required}!fetch\_tours.php@{fetch\_tours.php}}
+\doxysubsubsection{\texorpdfstring{\$required}{\$required}}
+{\footnotesize\ttfamily \label{fetch__tours_8php_a38addc8a958af4b42bda4fca677b4208} 
+\$required = "{}moderator"{}}
+
+\Hypertarget{fetch__tours_8php_af4b6fb1bbc77ccc05f10da3b16935b99}\index{fetch\_tours.php@{fetch\_tours.php}!\$response@{\$response}}
+\index{\$response@{\$response}!fetch\_tours.php@{fetch\_tours.php}}
+\doxysubsubsection{\texorpdfstring{\$response}{\$response}}
+{\footnotesize\ttfamily \label{fetch__tours_8php_af4b6fb1bbc77ccc05f10da3b16935b99} 
+\$response}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'data'}\ =>\ \mbox{\hyperlink{fetch__tours_8php_a6efc15b5a2314dd4b5aaa556a375c6d6}{\$data}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'total'}\ =>\ \mbox{\hyperlink{fetch__tours_8php_af9edf373290aa054a1f352baa29e75aa}{\$totalCount}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'currentPage'}\ =>\ \mbox{\hyperlink{fetch__tours_8php_a0a44e6760141442bb439b1ab1395d8ff}{\$page}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'itemsPerPage'}\ =>\ \mbox{\hyperlink{fetch__tours_8php_a12a028ce00879e8088b03511538cb399}{\$itemsPerPage}},}
+\DoxyCodeLine{]}
+
+\end{DoxyCode}
+\Hypertarget{fetch__tours_8php_a112ef069ddc0454086e3d1e6d8d55d07}\index{fetch\_tours.php@{fetch\_tours.php}!\$result@{\$result}}
+\index{\$result@{\$result}!fetch\_tours.php@{fetch\_tours.php}}
+\doxysubsubsection{\texorpdfstring{\$result}{\$result}}
+{\footnotesize\ttfamily \label{fetch__tours_8php_a112ef069ddc0454086e3d1e6d8d55d07} 
+\$result = \$stmt-\/$>$get\+\_\+result()}
+
+\Hypertarget{fetch__tours_8php_a047170d6020a882807665812a27e2525}\index{fetch\_tours.php@{fetch\_tours.php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!fetch\_tours.php@{fetch\_tours.php}}
+\doxysubsubsection{\texorpdfstring{\$sql}{\$sql}}
+{\footnotesize\ttfamily \label{fetch__tours_8php_a047170d6020a882807665812a27e2525} 
+\$sql}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{stringliteral}{"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ SELECT\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ t.tour\_id,\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ t.tour\_datetime,\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ t.capacity,\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ IFNULL(SUM(r.number\_of\_people),\ 0)\ AS\ used\_slots,\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ t.state,\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ t.updated\_at,\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ t.created\_at,\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ t.payment\_status,\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ t.payment\_method,}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ t.description,\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ t.number\_of\_guides}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ FROM\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ tours\ t}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ LEFT\ JOIN\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ reservations\ r\ ON\ t.tour\_id\ =\ r.tour\_id}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ WHERE\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ t.tour\_datetime\ >=\ CURDATE()\ -\/-\/\ Fetch\ only\ tours\ today\ and\ later}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ GROUP\ BY\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ t.tour\_id}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ ORDER\ BY\ }}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ t.tour\_datetime\ ASC\ -\/-\/\ Order\ by\ the\ closest\ upcoming\ event}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ LIMIT\ ?,\ ?;}}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}}}
+
+\end{DoxyCode}
+\Hypertarget{fetch__tours_8php_af27a9140d5f2658693e7fd107f716449}\index{fetch\_tours.php@{fetch\_tours.php}!\$stmt@{\$stmt}}
+\index{\$stmt@{\$stmt}!fetch\_tours.php@{fetch\_tours.php}}
+\doxysubsubsection{\texorpdfstring{\$stmt}{\$stmt}}
+{\footnotesize\ttfamily \label{fetch__tours_8php_af27a9140d5f2658693e7fd107f716449} 
+\$stmt = \$conn-\/$>$prepare(\$sql)}
+
+\Hypertarget{fetch__tours_8php_af9edf373290aa054a1f352baa29e75aa}\index{fetch\_tours.php@{fetch\_tours.php}!\$totalCount@{\$totalCount}}
+\index{\$totalCount@{\$totalCount}!fetch\_tours.php@{fetch\_tours.php}}
+\doxysubsubsection{\texorpdfstring{\$totalCount}{\$totalCount}}
+{\footnotesize\ttfamily \label{fetch__tours_8php_af9edf373290aa054a1f352baa29e75aa} 
+\$total\+Count = \$total\+Count\+Row\mbox{[}\textquotesingle{}total\textquotesingle{}\mbox{]}}
+
+\Hypertarget{fetch__tours_8php_a947bcb33f04bf0b4f40cd8f28d0c8cc3}\index{fetch\_tours.php@{fetch\_tours.php}!\$totalCountQuery@{\$totalCountQuery}}
+\index{\$totalCountQuery@{\$totalCountQuery}!fetch\_tours.php@{fetch\_tours.php}}
+\doxysubsubsection{\texorpdfstring{\$totalCountQuery}{\$totalCountQuery}}
+{\footnotesize\ttfamily \label{fetch__tours_8php_a947bcb33f04bf0b4f40cd8f28d0c8cc3} 
+\$total\+Count\+Query = "{}SELECT COUNT(\texorpdfstring{$\ast$}{*}) as total FROM tours WHERE tour\+\_\+datetime $>$= CURDATE();"{}}
+
+\Hypertarget{fetch__tours_8php_ab130519e25d6d218ae7f4902e7a519e2}\index{fetch\_tours.php@{fetch\_tours.php}!\$totalCountResult@{\$totalCountResult}}
+\index{\$totalCountResult@{\$totalCountResult}!fetch\_tours.php@{fetch\_tours.php}}
+\doxysubsubsection{\texorpdfstring{\$totalCountResult}{\$totalCountResult}}
+{\footnotesize\ttfamily \label{fetch__tours_8php_ab130519e25d6d218ae7f4902e7a519e2} 
+\$total\+Count\+Result = \$conn-\/$>$query(\$total\+Count\+Query)}
+
+\Hypertarget{fetch__tours_8php_addef53a44ff4184702b26db53334d56c}\index{fetch\_tours.php@{fetch\_tours.php}!\$totalCountRow@{\$totalCountRow}}
+\index{\$totalCountRow@{\$totalCountRow}!fetch\_tours.php@{fetch\_tours.php}}
+\doxysubsubsection{\texorpdfstring{\$totalCountRow}{\$totalCountRow}}
+{\footnotesize\ttfamily \label{fetch__tours_8php_addef53a44ff4184702b26db53334d56c} 
+\$total\+Count\+Row = \$total\+Count\+Result-\/$>$fetch\+\_\+assoc()}
+

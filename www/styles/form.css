@@ -1,0 +1,64 @@
+.form_green {
+    background-color: var(--c-2background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form_green label, span, h2, #cardsMenu ul h2 {
+    display: block;
+    font-size: 14px;
+    color: var(--c-lowText);
+    margin-bottom: 5px;
+}
+.form_green h2, #cardsMenu ul h2{
+    font-size: 26px;
+    font-family: sef;
+    margin: 5px;
+}
+
+.form_green input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--c-darkgreen);
+    border-radius: 4px;
+    background-color: var(--c-2background);
+    color: var(--c-text);
+}
+.form_green textarea{
+    resize: none;
+    overflow: auto;
+    word-wrap: break-word;
+}
+.form_green select{
+    width: 100%;
+}
+
+.form_green input[type="submit"],
+.form_green button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--c-green);
+    color: var(--c-text);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form_green input[type="submit"]:hover {
+    background-color: var(--c-darkgreen);
+}
+
+.form_green input[type="submit"]:active {
+    background-color: var(--c-2darkgreen);
+}
+
+.form_green input:required{
+    border-width: 3px;
+}

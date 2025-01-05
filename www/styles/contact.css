@@ -1,0 +1,53 @@
+.map {
+    --heg: min(90vw,800px);
+    width: var(--heg);
+    height: calc(var(--heg)*0.6);
+    margin: 10px auto;
+}
+
+#contact * {
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+
+.facebook {
+    text-decoration: none;
+     color:#4267B2;
+      font-weight: bold;
+}
+
+.header {
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+.main-text {
+    font-size: 2em;
+    color: white;
+    text-decoration: underline;
+}
+
+.sec-text {
+    font-size: 1.5em;
+}
+
+h1.header, p.main-text, p.sec-text {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+    color: white;
+}
+
+@media screen and (max-width: 400px){
+    .main-text{
+        font-size: 0.8em; /*1.6*/
+    }
+    .sec-text{
+        font-size: 0.6em; /*1.2*/
+    }
+    .header{
+        font-size: 1.1em; /*2.5*/
+    }
+}

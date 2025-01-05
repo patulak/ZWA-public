@@ -1,0 +1,18 @@
+RewriteEngine On
+
+RewriteRule ^home$ /pages/home.php [L]
+RewriteRule ^order$ /pages/order.php [L]
+RewriteRule ^gallery$ /pages/gallery.php [L]
+RewriteRule ^about$ /pages/about.php [L]
+RewriteRule ^contact$ /pages/contact.php [L]
+RewriteRule ^login$ /pages/login.php [L]
+RewriteRule ^profile$ /pages/profile.php [L]
+RewriteRule ^tours$ /pages/tours.php [L]
+RewriteRule ^calendar$ /pages/calendar.php [L]
+RewriteRule ^admin$ /pages/admin.php [L]
+
+RewriteRule ^fetch_data$ /pages/fetch_data.php [L]
+RewriteRule ^fetch_tours$ /pages/fetch_tours.php [L]
+
+RewriteCond %{ENV:HTTPS} !^.*on
+RewriteRule ^(.*)$ https://www.hagen-morina.cz/$1 [R,L]
