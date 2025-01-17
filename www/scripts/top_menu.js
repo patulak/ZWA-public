@@ -9,3 +9,8 @@ function toggleMenu() {
         menu.style.flexDirection = "column";
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const burgerMenu = document.querySelector('.burger-menu');
+    burgerMenu.addEventListener('click', toggleMenu);
+});

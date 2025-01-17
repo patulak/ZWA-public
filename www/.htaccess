@@ -13,6 +13,7 @@ RewriteRule ^admin$ /pages/admin.php [L]
 
 RewriteRule ^fetch_data$ /pages/fetch_data.php [L]
 RewriteRule ^fetch_tours$ /pages/fetch_tours.php [L]
+RewriteRule ^fetch_gall_data$ /pages/fetch_gall_data.php [L]
 
 RewriteCond %{ENV:HTTPS} !^.*on
 RewriteRule ^(.*)$ https://www.hagen-morina.cz/$1 [R,L]

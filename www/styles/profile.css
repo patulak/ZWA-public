@@ -25,3 +25,7 @@ main{
     margin-bottom: 8px;
     color: var(--c-lowText);
 }
+
+form{
+    margin-bottom: 16px !important;
+}

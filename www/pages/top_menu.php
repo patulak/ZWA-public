@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="styles/top_menu.css">
 <img src="sources/LogoImg.png" class="top_img" alt="Lomy amerika">
 <nav class="top_menu">
-    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+    <button class="burger-menu">☰</button>
     <ul>
         <li><a href="home">Domů</a></li>
         <!--<li><a href="order">Objednávky</a></li>-->

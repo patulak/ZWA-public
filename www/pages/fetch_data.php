@@ -14,7 +14,7 @@ if (isset($_GET['gallery'])) { //get image with button to remove
 
     while ($stmt->fetch()) {
         echo '
-            <form action="admin" method="POST" onsubmit="return confirmDelete()">
+            <form action="admin" method="POST" class="confirm-delete-gall">
                 <input type="hidden" name="image_remove_id" value="' . htmlspecialchars($path_to_img) . '">
                 <button type="submit" name="delete_image">
                     <img src="' . htmlspecialchars($path_to_img) . '" alt="Delete Image" style="width:100px;height:auto;">
@@ -33,7 +33,7 @@ if(isset($_GET['cards'])){ //get card with option to delete
 
     while ($stmt->fetch()) {
         echo '
-            <form action="admin" method="POST" onsubmit="return confirmDelete()">
+            <form action="admin" method="POST" class="confirm-delete-card">
                 <input type="hidden" name="card_remove_id" value="' . htmlspecialchars($id) . '">
                 <button type="submit" name="delete_item">
                     ' . htmlspecialchars($title) . '

@@ -1,4 +1,4 @@
-document.querySelector('form').addEventListener('submit', function (e) {
+document.querySelector('#change_pass_form').addEventListener('submit', function (e) {
     const passwordOne = document.getElementById('password_one').value;
     const passwordTwo = document.getElementById('password_two').value;
 

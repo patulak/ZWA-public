@@ -1,14 +1,13 @@
-const gridContainer = document.getElementById('tours-grid').querySelector('tbody');
-const paginationContainer = document.getElementById('pagination');
+
 
 let currentPage = 1;
 const itemsPerPage = 8;
 
 let global_data = [];
 
-
+const gridContainer = document.getElementById('tours-grid').querySelector('tbody');
+const paginationContainer = document.getElementById('pagination');
 document.getElementById('add-button').addEventListener('click', toggleAddForm);
-
 document.getElementById('add-form').addEventListener('submit', function (e) {
     fetchTours();
 });
@@ -28,6 +27,10 @@ function clearAddForm(){
 
 function toggleAddForm(forceDisplay = null) {
     const addForm = document.getElementById('add-form');
+    addForm.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+    });
     const params = new URLSearchParams(window.location.search);
     const side = params.get('state');
 
@@ -129,7 +132,6 @@ function renderGrid(data) {
             const rowId = this.id.split('_')[1];
             const tour = global_data[rowId];
             if (tour){
-                console.log(tour);
                 toggleAddForm(true);
                 document.getElementById("id_tour_datetime").value = tour.tour_datetime;
                 document.getElementById("id_capacity").value = tour.capacity;
@@ -142,6 +144,12 @@ function renderGrid(data) {
                 document.getElementById("id_submit").textContent = "Upravit";
                 document.getElementById("id_tour_id").value = tour.tour_id;
             }
+
+            const scroll_to = document.getElementById("add-form");
+            scroll_to.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
         });
     });
 

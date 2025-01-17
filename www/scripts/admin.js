@@ -9,6 +9,15 @@ function loadGallery(galleryId) {
         xhr.onload = function () {
             if (xhr.status === 200) {
                 galleryContainer.innerHTML = xhr.responseText;
+                const confirmDeleteForms = document.querySelectorAll('.confirm-delete-gall');
+                confirmDeleteForms.forEach(form => {
+                    form.addEventListener('submit', (event) => {
+                        const confirmed = confirm('Opravdu si přejete smazat tento obrázek?');
+                        if (!confirmed) {
+                            event.preventDefault();
+                        }
+                    });
+                });
             } else {
                 console.error('ERROR:', xhr.status, xhr.statusText);
                 galleryContainer.innerHTML = '<p>Chyba načítání.</p>';
@@ -26,6 +35,55 @@ function loadGallery(galleryId) {
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const gallerySelect = document.getElementById('gallery_in');
+
+    gallerySelect.addEventListener('change', function () {
+        const galleryId = this.value;
+
+        if (!galleryId) {
+            console.log('No gallery selected.');
+            return;
+        }
+
+        loadGallery(galleryId);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const gallerySelect = document.getElementById('edit_gallery_in');
+
+    const loadGalleryData = (galleryId) => {
+        if (!galleryId) {
+            document.getElementById('edit_gallery_title_in').value = '';
+            document.getElementById('edit_gallery_desc_in').value = '';
+            return;
+        }
+
+        fetch(`fetch_gall_data?gallery_id=${galleryId}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('edit_gallery_title_in').value = data.title || '';
+                document.getElementById('edit_gallery_desc_in').value = data.description || '';
+            })
+            .catch(error => {
+                console.error('Error fetching gallery data:', error);
+            });
+    };
+
+    gallerySelect.addEventListener('change', function () {
+        loadGalleryData(this.value);
+    });
+
+    loadGalleryData(gallerySelect.value);
+});
+
+
 function loadCards() {
     let cardsContainer = document.getElementById('cards_container');
     cardsContainer.innerHTML = 'Načítání příspěvků...';
@@ -36,6 +94,17 @@ function loadCards() {
     xhr.onload = function () {
         if (xhr.status === 200) {
             cardsContainer.innerHTML = "<h2>Smazat příspěvek</h2>" + xhr.responseText;
+
+            const confirmDeleteForms = document.querySelectorAll('.confirm-delete-card');
+            confirmDeleteForms.forEach(form => {
+            form.addEventListener('submit', (event) => {
+            const confirmed = confirm('Opravdu si přejete smazat tento příspěvek?');
+            if (!confirmed) {
+                event.preventDefault();
+            }
+            
+        });
+    });
         } else {
             console.error('ERROR:', xhr.status, xhr.statusText);
             cardsContainer.innerHTML = '<p>Chyba načítání.</p>';

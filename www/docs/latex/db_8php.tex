@@ -1,0 +1,108 @@
+\doxysection{pages/db.php File Reference}
+\hypertarget{db_8php}{}\label{db_8php}\index{pages/db.php@{pages/db.php}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{db_8php_a934b675dff7159581ac8829cfdac071b}{Get\+All\+Cards}} (\$conn)
+\item 
+\mbox{\hyperlink{db_8php_ac1667c5e814a29ee08e1e19c17c067b2}{Get\+All\+Galeries\+Cards}} (\$conn)
+\item 
+\mbox{\hyperlink{db_8php_ad497b7a37eedfbdc6f27e3619709a1d3}{Get\+All\+Galeries\+Option}} (\$conn)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{db_8php_a6c6cc916128ceefe57b5f996de2055c1}{MYSQL\+\_\+\+HOST}} "{}127.\+0.\+0.\+1"{}
+\item 
+const \mbox{\hyperlink{db_8php_ae16ce67193d58d420cfdb77d490eb64f}{MYSQL\+\_\+\+USER}} "{}root"{}
+\item 
+const \mbox{\hyperlink{db_8php_a9798d273fa6de30d62349f49ba5d3ee8}{MYSQL\+\_\+\+PASS}} "{}Kolac123"{}
+\item 
+const \mbox{\hyperlink{db_8php_ad40674d6feee522b3288ac605b7a06de}{MYSQL\+\_\+\+DB}} "{}website"{}
+\item 
+\mbox{\hyperlink{db_8php_aa8a5a87b9c1a6a0819b88447cbe41877}{\$conn}} = new mysqli(\mbox{\hyperlink{db_8php_a6c6cc916128ceefe57b5f996de2055c1}{MYSQL\+\_\+\+HOST}}, \mbox{\hyperlink{db_8php_ae16ce67193d58d420cfdb77d490eb64f}{MYSQL\+\_\+\+USER}}, \mbox{\hyperlink{db_8php_a9798d273fa6de30d62349f49ba5d3ee8}{MYSQL\+\_\+\+PASS}}, \mbox{\hyperlink{db_8php_ad40674d6feee522b3288ac605b7a06de}{MYSQL\+\_\+\+DB}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{db_8php_a934b675dff7159581ac8829cfdac071b}\index{db.php@{db.php}!GetAllCards@{GetAllCards}}
+\index{GetAllCards@{GetAllCards}!db.php@{db.php}}
+\doxysubsubsection{\texorpdfstring{GetAllCards()}{GetAllCards()}}
+{\footnotesize\ttfamily \label{db_8php_a934b675dff7159581ac8829cfdac071b} 
+Get\+All\+Cards (\begin{DoxyParamCaption}\item[{}]{\$conn}{}\end{DoxyParamCaption})}
+
+select data for all cards, and use \doxylink{card_8php}{card.\+php} to print
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$conn} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{db_8php_ac1667c5e814a29ee08e1e19c17c067b2}\index{db.php@{db.php}!GetAllGaleriesCards@{GetAllGaleriesCards}}
+\index{GetAllGaleriesCards@{GetAllGaleriesCards}!db.php@{db.php}}
+\doxysubsubsection{\texorpdfstring{GetAllGaleriesCards()}{GetAllGaleriesCards()}}
+{\footnotesize\ttfamily \label{db_8php_ac1667c5e814a29ee08e1e19c17c067b2} 
+Get\+All\+Galeries\+Cards (\begin{DoxyParamCaption}\item[{}]{\$conn}{}\end{DoxyParamCaption})}
+
+select data for all galeries, and use \doxylink{gallery__card_8php}{gallery\+\_\+card.\+php} to print
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$conn} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{db_8php_ad497b7a37eedfbdc6f27e3619709a1d3}\index{db.php@{db.php}!GetAllGaleriesOption@{GetAllGaleriesOption}}
+\index{GetAllGaleriesOption@{GetAllGaleriesOption}!db.php@{db.php}}
+\doxysubsubsection{\texorpdfstring{GetAllGaleriesOption()}{GetAllGaleriesOption()}}
+{\footnotesize\ttfamily \label{db_8php_ad497b7a37eedfbdc6f27e3619709a1d3} 
+Get\+All\+Galeries\+Option (\begin{DoxyParamCaption}\item[{}]{\$conn}{}\end{DoxyParamCaption})}
+
+get all ganeries to fill options in select
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$conn} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{db_8php_aa8a5a87b9c1a6a0819b88447cbe41877}\index{db.php@{db.php}!\$conn@{\$conn}}
+\index{\$conn@{\$conn}!db.php@{db.php}}
+\doxysubsubsection{\texorpdfstring{\$conn}{\$conn}}
+{\footnotesize\ttfamily \label{db_8php_aa8a5a87b9c1a6a0819b88447cbe41877} 
+\$conn = new mysqli(\mbox{\hyperlink{db_8php_a6c6cc916128ceefe57b5f996de2055c1}{MYSQL\+\_\+\+HOST}}, \mbox{\hyperlink{db_8php_ae16ce67193d58d420cfdb77d490eb64f}{MYSQL\+\_\+\+USER}}, \mbox{\hyperlink{db_8php_a9798d273fa6de30d62349f49ba5d3ee8}{MYSQL\+\_\+\+PASS}}, \mbox{\hyperlink{db_8php_ad40674d6feee522b3288ac605b7a06de}{MYSQL\+\_\+\+DB}})}
+
+\Hypertarget{db_8php_ad40674d6feee522b3288ac605b7a06de}\index{db.php@{db.php}!MYSQL\_DB@{MYSQL\_DB}}
+\index{MYSQL\_DB@{MYSQL\_DB}!db.php@{db.php}}
+\doxysubsubsection{\texorpdfstring{MYSQL\_DB}{MYSQL\_DB}}
+{\footnotesize\ttfamily \label{db_8php_ad40674d6feee522b3288ac605b7a06de} 
+const MYSQL\+\_\+\+DB "{}website"{}}
+
+\Hypertarget{db_8php_a6c6cc916128ceefe57b5f996de2055c1}\index{db.php@{db.php}!MYSQL\_HOST@{MYSQL\_HOST}}
+\index{MYSQL\_HOST@{MYSQL\_HOST}!db.php@{db.php}}
+\doxysubsubsection{\texorpdfstring{MYSQL\_HOST}{MYSQL\_HOST}}
+{\footnotesize\ttfamily \label{db_8php_a6c6cc916128ceefe57b5f996de2055c1} 
+const MYSQL\+\_\+\+HOST "{}127.\+0.\+0.\+1"{}}
+
+\Hypertarget{db_8php_a9798d273fa6de30d62349f49ba5d3ee8}\index{db.php@{db.php}!MYSQL\_PASS@{MYSQL\_PASS}}
+\index{MYSQL\_PASS@{MYSQL\_PASS}!db.php@{db.php}}
+\doxysubsubsection{\texorpdfstring{MYSQL\_PASS}{MYSQL\_PASS}}
+{\footnotesize\ttfamily \label{db_8php_a9798d273fa6de30d62349f49ba5d3ee8} 
+const MYSQL\+\_\+\+PASS "{}Kolac123"{}}
+
+\Hypertarget{db_8php_ae16ce67193d58d420cfdb77d490eb64f}\index{db.php@{db.php}!MYSQL\_USER@{MYSQL\_USER}}
+\index{MYSQL\_USER@{MYSQL\_USER}!db.php@{db.php}}
+\doxysubsubsection{\texorpdfstring{MYSQL\_USER}{MYSQL\_USER}}
+{\footnotesize\ttfamily \label{db_8php_ae16ce67193d58d420cfdb77d490eb64f} 
+const MYSQL\+\_\+\+USER "{}root"{}}
+
